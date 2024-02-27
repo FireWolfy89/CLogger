@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CLogger"
         mc:Ignorable="d"
+         ResizeMode="NoResize"
         Title="Details" Height="700" Width="500">
     <Grid Margin="50">
         <Grid.ColumnDefinitions>
@@ -78,7 +79,6 @@
         <StackPanel Grid.Column="0"
                 VerticalAlignment="Bottom">
             <Button
-            Background="green"
             Click="Update_Button"
             Height="100"
             Content="Update"/>
