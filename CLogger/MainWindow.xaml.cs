@@ -28,17 +28,21 @@ namespace CLogger
             string fatText = FatTextBox.Text;
             
             try {
+                if (protText.Length > 4 || carbsText.Length > 4 || fatText.Length > 4)
+                {
+                    throw new ArgumentException();
+                }
+                    int prot = Convert.ToInt32(protText);
+                    int carbs = Convert.ToInt32(carbsText);
+                    int fat = Convert.ToInt32(fatText);
 
-                int prot = Convert.ToInt32(protText);
-                int carbs = Convert.ToInt32(carbsText);
-                int fat = Convert.ToInt32(fatText);
+                    string cal = (prot * 4 + carbs * 4 + fat * 9).ToString();
 
-                string cal = (prot * 4 + carbs * 4 + fat * 9).ToString();
-
-                Result res = new Result(dayText, protText, carbsText, fatText, cal);
-                res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                this.Close();
-                res.ShowDialog();
+                    Result res = new Result(dayText, protText, carbsText, fatText, cal);
+                    res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                    this.Close();
+                    res.ShowDialog();
+                
                 
             }
 
@@ -47,9 +51,13 @@ namespace CLogger
                 MessageBox.Show("Format error, please provide a valid number/text");
                 return;
             }
-            
-           
-           
+            catch (ArgumentException)
+            {
+                MessageBox.Show("The input number is too big.");
+            }
+
+
+
         }
 
         private void Logs_Button(object sender, RoutedEventArgs e)

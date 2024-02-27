@@ -40,6 +40,10 @@ namespace CLogger
 
             try
             {
+                if (macro.Protein.Length > 4 || macro.Carb.Length > 4 || macro.Fat.Length > 4)
+                {
+                    throw new ArgumentException();
+                }
                 int prot = Convert.ToInt32(macro.Protein);
                 int carbs = Convert.ToInt32(macro.Carb);
                 int fat = Convert.ToInt32(macro.Fat);
@@ -61,7 +65,13 @@ namespace CLogger
                 MessageBox.Show("Format error, please provide a valid number/text");
                 return;
             }
+
+            catch (ArgumentException)
+            {
+                MessageBox.Show("The input number is too big.");
+            }
             
+
 
             Close();
         }
