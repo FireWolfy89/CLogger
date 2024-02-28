@@ -48,7 +48,7 @@ namespace CLogger
 
             catch (FormatException)
             {
-                MessageBox.Show("Format error, please provide a valid number/text");
+                MessageBox.Show("Format error, please provide a valid number");
                 return;
             }
             catch (ArgumentException)

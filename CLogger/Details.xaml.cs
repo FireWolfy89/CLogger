@@ -70,7 +70,7 @@ namespace CLogger
             {
                 MessageBox.Show("The input number is too big.");
             }
-            
+
 
 
             Close();
