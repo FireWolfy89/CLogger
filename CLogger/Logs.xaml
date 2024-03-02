@@ -12,7 +12,6 @@
             SelectionChanged="macrosListView_SelectionChanged"
             Margin="10"
             x:Name="macrosListView">
-            
             <ListView.View>
                 <GridView>
                     <GridView.ColumnHeaderContainerStyle>
@@ -24,10 +23,10 @@
                     <GridViewColumn Header="Protein" Width="120" DisplayMemberBinding="{Binding Protein}" />
                     <GridViewColumn Header="Carbs" Width="120" DisplayMemberBinding="{Binding Carb}" />
                     <GridViewColumn Header="Fat" Width="120" DisplayMemberBinding="{Binding Fat}" />
-                    <GridViewColumn Header="Calories" Width="120" DisplayMemberBinding="{Binding Result}" />
+                    <GridViewColumn Header="Calories" Width="120" DisplayMemberBinding="{Binding Result}"/>
+                    <GridViewColumn Header="Date" Width="120" DisplayMemberBinding="{Binding Date}" />               
                 </GridView>
             </ListView.View>
         </ListView>
-        
     </Grid>
 </Window>

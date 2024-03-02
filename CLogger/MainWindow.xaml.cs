@@ -26,34 +26,35 @@ namespace CLogger
             string protText = ProtTextBox.Text;
             string carbsText = CarbsTextBox.Text;
             string fatText = FatTextBox.Text;
+            DateTime date = DateTime.Now;
             
             try {
-                if (protText.Length > 4 || carbsText.Length > 4 || fatText.Length > 4)
-                {
-                    throw new ArgumentException();
-                }
+                    if (protText.Length > 4 || carbsText.Length > 4 || fatText.Length > 4)
+                    {
+                        throw new ArgumentException();
+                    }
                     int prot = Convert.ToInt32(protText);
                     int carbs = Convert.ToInt32(carbsText);
                     int fat = Convert.ToInt32(fatText);
 
                     string cal = (prot * 4 + carbs * 4 + fat * 9).ToString();
 
-                    Result res = new Result(dayText, protText, carbsText, fatText, cal);
+                    Result res = new Result(dayText, protText, carbsText, fatText, cal, date);
                     res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                     this.Close();
-                    res.ShowDialog();
+                    res.Show();
                 
                 
             }
 
             catch (FormatException)
             {
-                MessageBox.Show("Format error, please provide a valid number");
+                MessageBox.Show("Invalid input. Please provide a valid format!");
                 return;
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("The input number is too big.");
+                MessageBox.Show("Invalid unput. Number is too big!");
             }
 
 

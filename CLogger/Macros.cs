@@ -23,6 +23,7 @@ namespace CLogger
 
         public string Result { get; set; }
 
+        public DateTime Date { get; set; } = DateTime.Now;
        
 
     }
