@@ -14,20 +14,21 @@ namespace CLogger
    
     public partial class MainWindow : Window
     {
+        Macros macro;
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            DateNameBox.Text = DateTime.Now.ToString("yy/MM/dd"); 
         }
 
         private void Calculate_Button(object sender, RoutedEventArgs e)
         {
-            string dayText = (DayComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+            string dayText = DateNameBox.Text;
             string protText = ProtTextBox.Text;
             string carbsText = CarbsTextBox.Text;
             string fatText = FatTextBox.Text;
-            DateTime date = DateTime.Now;
-            
+
             try {
                     if (protText.Length > 4 || carbsText.Length > 4 || fatText.Length > 4)
                     {
@@ -39,12 +40,9 @@ namespace CLogger
 
                     string cal = (prot * 4 + carbs * 4 + fat * 9).ToString();
 
-                    Result res = new Result(dayText, protText, carbsText, fatText, cal, date);
+                    Result res = new Result(dayText, protText, carbsText, fatText, cal);
                     res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                    this.Close();
-                    res.Show();
-                
-                
+                    res.ShowDialog();
             }
 
             catch (FormatException)
@@ -54,7 +52,7 @@ namespace CLogger
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Invalid unput. Number is too big!");
+                MessageBox.Show("Invalid input. Number is too big!");
             }
 
 
@@ -67,5 +65,7 @@ namespace CLogger
             logs.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             logs.ShowDialog();
         }
+
+       
     }
 }

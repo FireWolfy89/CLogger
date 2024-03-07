@@ -78,7 +78,7 @@
             Grid.Column="1">
             <Label
                 Margin="0"
-                Content="Day:"/>
+                Content="Date:"/>
             <Label
                 Margin="0"
                 Content="Protein(g):"/>

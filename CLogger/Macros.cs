@@ -13,7 +13,6 @@ namespace CLogger
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Day { get; set; }
 
         public string Protein { get; set; }
 
@@ -22,7 +21,7 @@ namespace CLogger
         public string Fat { get; set; }
 
         public string Result { get; set; }
-
+        
         public DateTime Date { get; set; } = DateTime.Now;
        
 

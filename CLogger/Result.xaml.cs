@@ -21,8 +21,9 @@ namespace CLogger
     /// </summary>
     public partial class Result : Window
     {
-        public Result(string day,string prot, string carbs, string fat, string cal, DateTime date)
+        public Result(string day,string prot, string carbs, string fat, string cal)
         {
+            
             InitializeComponent();
 
             RDayTextBox.Text = day;
@@ -30,7 +31,6 @@ namespace CLogger
             RCarbsTextBox.Text = carbs;
             RFatTextBox.Text = fat;
             ResultTextBox.Text = cal;
-            DateTextBlock.Text = date.ToString("yyyy.MM.dd");
 
         }
 
@@ -38,7 +38,7 @@ namespace CLogger
         {
             Macros macro = new Macros()
             {
-                Day = RDayTextBox.Text,
+                Date = DateTime.Parse(RDayTextBox.Text),
                 Protein = RProteinTextBox.Text,
                 Carb = RCarbsTextBox.Text,
                 Fat = RFatTextBox.Text,
@@ -54,12 +54,10 @@ namespace CLogger
 
             }
 
-           
-            
-            MainWindow window = new MainWindow();
-            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.Close();
-            window.Show();
+            
         }
+
+
     }
 }

@@ -27,13 +27,14 @@ namespace CLogger
 
             this.macro = macro;
 
+            DDateNameBox.Text = macro.Date.ToString("yy/MM/dd");
             DProtTextBox.Text = macro.Protein;
             DCarbsTextBox.Text = macro.Carb;
             DFatTextBox.Text = macro.Fat;
         }
         private void Update_Button(object sender, RoutedEventArgs e)
         {
-            macro.Day = (DayComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+            macro.Date = DateTime.Parse(DDateNameBox.Text);
             macro.Protein = DProtTextBox.Text;
             macro.Carb = DCarbsTextBox.Text;
             macro.Fat = DFatTextBox.Text;

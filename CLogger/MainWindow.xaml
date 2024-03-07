@@ -52,31 +52,34 @@
             VerticalAlignment="Top"
             Grid.Column="0"
             Grid.ColumnSpan="1">
-            <ComboBox
-                FontSize="15"
-                Width="85"
-                x:Name="DayComboBox" SelectedIndex="0">
-                <ComboBoxItem Content="Monday"/>
-                <ComboBoxItem Content="Tuesday"/>
-                <ComboBoxItem Content="Wednesday"/>
-                <ComboBoxItem Content="Thursday"/>
-                <ComboBoxItem Content="Friday"/>
-                <ComboBoxItem Content="Saturday"/>
-                <ComboBoxItem Content="Sunday"/>
-            </ComboBox>
-
         </StackPanel>
-        <TextBox x:Name="ProtTextBox" Grid.ColumnSpan="1" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="0,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.457,2.253"/>
-        <TextBox x:Name="CarbsTextBox" Grid.ColumnSpan="1"  FontSize="20" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="0,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.457,2.253"/>
+        <TextBlock
+            x:Name="DateNameBox"
+            Grid.Column="0"
+            Margin="5,202,0,0"
+            FontSize="18"
+            FontWeight="Bold"
+            FontStyle="Italic"
+            HorizontalAlignment="Center"
+            Height="25"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="95"
+            Background="#F0F0F0"
+            Foreground="Black"
+            TextAlignment="Center"/>
+        <TextBox x:Name="ProtTextBox" Grid.ColumnSpan="1" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="5,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
+        <TextBox x:Name="CarbsTextBox" Grid.ColumnSpan="1"  FontSize="20" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="5,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
         <TextBox x:Name="FatTextBox"
                  Grid.Column="3"
                  FontSize="20"
                  HorizontalAlignment="Center"
                  Height="25"
-                 Margin="0,202,0,0"
+                 Margin="5,202,0,0"
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
                  Width="90" 
+                 TextAlignment="Center"
                  RenderTransformOrigin="0.457,2.253"/>
         <StackPanel Grid.Column="0"
                     VerticalAlignment="Bottom">

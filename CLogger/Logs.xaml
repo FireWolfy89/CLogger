@@ -19,12 +19,11 @@
                             <Setter Property="HorizontalContentAlignment" Value="Left"/>
                         </Style>
                     </GridView.ColumnHeaderContainerStyle>
-                    <GridViewColumn Header="Day" Width="120" DisplayMemberBinding="{Binding Day}"/>
+                    <GridViewColumn Header="Date" Width="120" DisplayMemberBinding="{Binding Date, StringFormat={}{0:yy/MM/dd}}"/>
                     <GridViewColumn Header="Protein" Width="120" DisplayMemberBinding="{Binding Protein}" />
                     <GridViewColumn Header="Carbs" Width="120" DisplayMemberBinding="{Binding Carb}" />
                     <GridViewColumn Header="Fat" Width="120" DisplayMemberBinding="{Binding Fat}" />
                     <GridViewColumn Header="Calories" Width="120" DisplayMemberBinding="{Binding Result}"/>
-                    <GridViewColumn Header="Date" Width="120" DisplayMemberBinding="{Binding Date}" />               
                 </GridView>
             </ListView.View>
         </ListView>
