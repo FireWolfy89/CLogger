@@ -45,6 +45,10 @@ namespace CLogger
                 {
                     throw new ArgumentException();
                 }
+                else if (macro.Protein.Contains("-") || macro.Carb.Contains("-") || macro.Fat.Contains("-"))
+                {
+                    throw new ArgumentException();
+                }
                 int prot = Convert.ToInt32(macro.Protein);
                 int carbs = Convert.ToInt32(macro.Carb);
                 int fat = Convert.ToInt32(macro.Fat);
@@ -69,7 +73,7 @@ namespace CLogger
 
             catch (ArgumentException)
             {
-                MessageBox.Show("The input number is too big.");
+                MessageBox.Show("The input number is too big/negative!");
             }
 
 
