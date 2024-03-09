@@ -58,6 +58,16 @@ namespace CLogger
             
         }
 
+        private void Details_Button_Click(object sender, RoutedEventArgs e)
+        {
+            string prot = RProteinTextBox.Text;
+            string carbs = RCarbsTextBox.Text;  
+            string fat = RFatTextBox.Text;
+            string cal = RFatTextBox.Text;
 
+            SpecDetails specDetails = new SpecDetails(prot, carbs, fat, cal);
+            specDetails.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            specDetails.ShowDialog();   
+        }
     }
 }

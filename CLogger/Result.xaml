@@ -13,6 +13,17 @@
             <ColumnDefinition Width="130"></ColumnDefinition>
             <ColumnDefinition Width="130"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <!--<Button
+            x:Name="Details_Button"
+            Grid.Column="0"
+            VerticalAlignment="Top"
+            Content="Diagram"
+            FontFamily="Arial Black"
+            Margin="0,5,5,0"
+            Width="80"
+            Height="50"
+            Click="Details_Button_Click">
+        </Button>-->
         <Label 
             x:Name="TotalCalLabel"
             Grid.Column="0"
@@ -51,7 +62,8 @@
         </StackPanel>
         <Button x:Name="button"
              Foreground="Black"
-            Margin="20,0,20,10"
+            FontFamily="Arial Black"
+            Margin="20,0,20,10"   
             Click="Save_Button"
             Height="30"
             VerticalAlignment="Top"
@@ -68,7 +80,7 @@
         </Button>
         <TextBlock
             x:Name="ResultTextBox"
-            Margin="10"
+            Margin="12"
             FontSize="20"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"

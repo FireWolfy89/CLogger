@@ -19,7 +19,7 @@ namespace CLogger
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            DateNameBox.Text = DateTime.Now.ToString("yy/MM/dd"); 
+            DateNameBox.Text = DateTime.Now.ToString("yyyy.MM.dd");
         }
 
         private void Calculate_Button(object sender, RoutedEventArgs e)

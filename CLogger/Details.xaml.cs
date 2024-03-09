@@ -27,7 +27,7 @@ namespace CLogger
 
             this.macro = macro;
 
-            DDateNameBox.Text = macro.Date.ToString("yy/MM/dd");
+            DDateNameBox.Text = macro.Date.ToString("yyyy.MM.dd");
             DProtTextBox.Text = macro.Protein;
             DCarbsTextBox.Text = macro.Carb;
             DFatTextBox.Text = macro.Fat;

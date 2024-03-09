@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="DDayLabel"
            Grid.Column="0" 
-           Content="Day" 
+           Content="Date" 
            HorizontalAlignment="Center" 
            VerticalAlignment="Top"
            FontSize="20"/>
@@ -52,21 +52,25 @@
             Grid.Column="0"
             Grid.ColumnSpan="1">
         </StackPanel>
-        <TextBlock
-            x:Name="DDateNameBox"
+        <Border
             Grid.Column="0"
-            Margin="5,202,0,0"
+            Margin="-25,197,0,0"
+            Padding="5"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Background="LightCyan"
+            CornerRadius="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <TextBlock
+            x:Name="DDateNameBox"
             FontSize="18"
             FontWeight="Bold"
             FontStyle="Italic"
-            HorizontalAlignment="Center"
-            Height="25"
-            TextWrapping="Wrap"
-            VerticalAlignment="Top"
-            Width="95"
-            Background="#F0F0F0"
+            TextAlignment="Center"
             Foreground="Black"
-            TextAlignment="Center"/>
+            Background="Transparent"/>
+        </Border>
         <TextBox x:Name="DProtTextBox" Grid.ColumnSpan="1" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="5,202,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
         <TextBox x:Name="DCarbsTextBox" Grid.ColumnSpan="1"  FontSize="20" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="5,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" TextAlignment="Center"/>
         <TextBox x:Name="DFatTextBox"
