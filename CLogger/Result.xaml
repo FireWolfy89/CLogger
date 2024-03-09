@@ -26,6 +26,7 @@
         </Button>-->
         <Label 
             x:Name="TotalCalLabel"
+            Margin="0,0,-4,0"
             Grid.Column="0"
             VerticalAlignment="Bottom"
             Content="Total Calories:"/>
