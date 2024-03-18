@@ -27,10 +27,10 @@ namespace CLogger
             InitializeComponent();
 
             RDayTextBox.Text = day;
-            RProteinTextBox.Text = prot;
+            RProteinTextBox.Text = prot; 
             RCarbsTextBox.Text = carbs;
             RFatTextBox.Text = fat;
-            ResultTextBox.Text = cal;
+            ResultTextBox.Content = cal;
 
         }
 
@@ -42,7 +42,7 @@ namespace CLogger
                 Protein = RProteinTextBox.Text,
                 Carb = RCarbsTextBox.Text,
                 Fat = RFatTextBox.Text,
-                Result = ResultTextBox.Text,
+                Result = (string)ResultTextBox.Content,
             };
 
             
@@ -63,7 +63,8 @@ namespace CLogger
             string prot = RProteinTextBox.Text;
             string carbs = RCarbsTextBox.Text;  
             string fat = RFatTextBox.Text;
-            string cal = RFatTextBox.Text;
+            string cal = (string)ResultTextBox.Content;
+            
 
             SpecDetails specDetails = new SpecDetails(prot, carbs, fat, cal);
             specDetails.WindowStartupLocation = WindowStartupLocation.CenterScreen;
