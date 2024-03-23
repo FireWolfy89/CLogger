@@ -63,7 +63,7 @@
             CornerRadius="10"
             HorizontalAlignment="Center"
             VerticalAlignment="Top">
-        <TextBlock
+            <TextBlock
             x:Name="DateNameBox"
             FontSize="18"
             FontWeight="Bold"
@@ -92,7 +92,8 @@
                 Click="Logs_Button"
                 Height="100"
                 Content="Logs"/>
-           
+
         </StackPanel>
+        <Button Content="Food/Cal" Click="CalFood" HorizontalAlignment="Center" Margin="0,354,0,0" VerticalAlignment="Top" Grid.Column="3" Width="100" Height="50"/>
     </Grid>
 </Window>

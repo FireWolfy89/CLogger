@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Data;
+using System.Net.NetworkInformation;
 using System.Windows;
 
 namespace CLogger
@@ -12,6 +13,13 @@ namespace CLogger
        static  string databaseName = "Macros.db";
        static  string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
        public static  string databasePath = System.IO.Path.Combine(folderPath, databaseName);
+    }
+
+    public partial class DB2 : Application
+    {
+        static string databaseName = "Daily.db";
+        static string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string databasePath = System.IO.Path.Combine(folderPath, databaseName);
     }
 
 }

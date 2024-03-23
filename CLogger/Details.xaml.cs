@@ -21,6 +21,9 @@ namespace CLogger
     public partial class Details : Window
     {
         Macros macro;
+
+        private IDataValidation dataValidation = new CommonDataValidation();
+
         public Details(Macros macro)
         {
             InitializeComponent();
@@ -41,27 +44,14 @@ namespace CLogger
 
             try
             {
-                if (macro.Protein.Length > 4 || macro.Carb.Length > 4 || macro.Fat.Length > 4)
-                {
-                    throw new ArgumentException();
-                }
-                else if (macro.Protein.Contains("-") || macro.Carb.Contains("-") || macro.Fat.Contains("-"))
-                {
-                    throw new ArgumentException();
-                }
-                int prot = Convert.ToInt32(macro.Protein);
-                int carbs = Convert.ToInt32(macro.Carb);
-                int fat = Convert.ToInt32(macro.Fat);
+                dataValidation.IsInputValid(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 
-                macro.Result = (prot * 4 + carbs * 4 + fat * 9).ToString();
+                macro.Result = dataValidation.ConvertToDouble(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 
                 using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
                 {
                     connection.CreateTable<Macros>();
                     connection.Update(macro);
-                   
-                    
-
                 }
             }
 
