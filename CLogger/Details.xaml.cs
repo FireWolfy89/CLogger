@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using CLogger.Classes;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +45,7 @@ namespace CLogger
 
             try
             {
-                dataValidation.IsInputValid(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
+                dataValidation.IsInputValid(null,DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 
                 macro.Result = dataValidation.ConvertToDouble(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 

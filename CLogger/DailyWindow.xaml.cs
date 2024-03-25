@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using CLogger.Classes;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -40,7 +41,7 @@ namespace CLogger
         {
             try
             {
-                dataValidation.IsInputValid(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
+                dataValidation.IsInputValid(null, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
                 string cal = dataValidation.ConvertToDouble(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
@@ -149,7 +150,7 @@ namespace CLogger
                     SelectedDaily.Carb = DailyCarb.Text;
                     SelectedDaily.Fat = DailyFat.Text;
 
-                    dataValidation.IsInputValid_daily(DailyFood.Text, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
+                    dataValidation.IsInputValid(DailyFood.Text, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
                     SelectedDaily.Result = dataValidation.ConvertToDouble(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 

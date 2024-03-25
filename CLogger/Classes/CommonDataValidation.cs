@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace CLogger
+namespace CLogger.Classes
 {
     //This is the class where I contain all my calculation logic and conversions/constraints
 
@@ -21,7 +21,8 @@ namespace CLogger
             return cal;
         }
 
-        public bool IsInputValid(string protText, string carbText, string fatText)
+       
+        public bool IsInputValid(string food, string protText, string carbText, string fatText)
         {
             if (protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
             {
@@ -33,19 +34,6 @@ namespace CLogger
             }
             return true;
         }
-        
-        public bool IsInputValid_daily(string food, string prot, string carbs, string fat)
-        {
-            if (food.Length > 15 || prot.Length > 5 || carbs.Length > 5 || fat.Length > 5)
-            {
-                throw new ArgumentException();
-            }
-            else if (prot.Contains("-") || carbs.Contains("-") || fat.Contains("-"))
-            {
-                throw new ArgumentException();
-            }
-            return true;
 
-        }
     }
 }

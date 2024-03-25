@@ -1,4 +1,4 @@
-﻿ using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,11 +10,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using CLogger.Classes;
 
 
 namespace CLogger
 {
-   
+
     public partial class MainWindow : Window
     {
         Macros macro;
@@ -32,7 +33,7 @@ namespace CLogger
         {
             try
             {
-                dataValidation.IsInputValid(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
+                dataValidation.IsInputValid(null, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
                 string cal = dataValidation.ConvertToDouble(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 

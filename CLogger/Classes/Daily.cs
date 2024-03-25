@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CLogger
+namespace CLogger.Classes
 {
     public class Daily
     {
@@ -14,15 +14,13 @@ namespace CLogger
 
         public string Name { get; set; }
 
-        public string Protein {  get; set; }
+        public string Protein { get; set; }
 
         public string Carb { get; set; }
 
         public string Fat { get; set; }
 
         public string Result { get; set; }
-
-        public DateTime Date { get; set; } = DateTime.Now;
 
     }
 }

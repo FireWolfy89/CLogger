@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace CLogger
+namespace CLogger.Classes
 {
     public class Macros
     {
@@ -21,9 +21,9 @@ namespace CLogger
         public string Fat { get; set; }
 
         public string Result { get; set; }
-        
+
         public DateTime Date { get; set; } = DateTime.Now;
-       
+
 
     }
 }
