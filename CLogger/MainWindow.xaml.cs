@@ -36,7 +36,7 @@ namespace CLogger
 
                 string cal = dataValidation.ConvertToDouble(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
-                Result res = new Result(DateNameBox.Text, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text, cal);
+                Result1 res = new Result1(DateNameBox.Text, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text, cal);
                 res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 res.ShowDialog();
             }

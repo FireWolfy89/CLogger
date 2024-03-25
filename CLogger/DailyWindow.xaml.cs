@@ -116,7 +116,8 @@ namespace CLogger
                 DailyFood.Text = SelectedDaily.Name;
                 DailyProt.Text = SelectedDaily.Protein;
                 DailyCarb.Text = SelectedDaily.Carb;
-                DailyFat.Text = SelectedDaily.Fat;  
+                DailyFat.Text = SelectedDaily.Fat;
+                DailyRes.Text = SelectedDaily.Result;
             }
         }
 
@@ -212,7 +213,7 @@ namespace CLogger
             }
             string date = DateTime.Now.ToString("yyyy.MM.dd");
 
-            Result resultWindow = new Result(date, 
+            Result1 resultWindow = new Result1(date, 
                                     totalProtein.ToString(), 
                                     totalCarb.ToString(), 
                                     totalFat.ToString(), 

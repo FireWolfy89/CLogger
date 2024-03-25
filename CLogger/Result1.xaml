@@ -1,0 +1,35 @@
+﻿<Window x:Class="CLogger.Result1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:CLogger"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="Result1" Height="800" Width="500">
+    <Grid>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="37,76,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Protein(g):" HorizontalAlignment="Left" Margin="37,114,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Carbs(g):" HorizontalAlignment="Left" Margin="37,152,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Fat(g): " HorizontalAlignment="Left" Margin="37,193,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Total Calories(kcal)" HorizontalAlignment="Left" Margin="37,297,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Date" Margin="323,79,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Prot" Margin="323,117,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30" RenderTransformOrigin="0.306,0.524"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Carbs" Margin="323,155,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Fat" Margin="323,196,0,0" TextAlignment="Center" Background="Beige" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Res" Margin="323,300,0,0" TextAlignment="Center" TextWrapping="Wrap" Background="Beige" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
+        <Button Content="Log it!" Click="Save_Button" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="40" Width="160" FontFamily="Arial Black"/>
+        <lvc:PieChart LegendLocation="Left" 
+              Series="{Binding SeriesCollection}"
+              AnimationsSpeed="00:00:00.2000"
+              Hoverable="True"
+              InnerRadius="10"
+              Margin="10,243,219,-100">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="25" TextBlock.FontSize="20" Foreground="White" FontWeight="Bold"/>
+            </lvc:PieChart.ChartLegend>
+
+        </lvc:PieChart>
+    </Grid>
+</Window>
