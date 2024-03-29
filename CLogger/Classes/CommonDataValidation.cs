@@ -21,10 +21,23 @@ namespace CLogger.Classes
             return cal;
         }
 
-       
-        public bool IsInputValid(string food, string protText, string carbText, string fatText)
+        public bool IsInputValid(string prot, string carb, string fat)
         {
-            if (protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
+            if (prot.Length > 5 || carb.Length > 5 || fat.Length > 5)
+            {
+                throw new ArgumentException();
+            }
+            else if (prot.Contains("-") || carb.Contains("-") || fat.Contains("-"))
+            {
+                throw new ArgumentException();
+            }
+            return true;
+        }
+
+       
+        public bool IsInputValidDaily(string food, string protText, string carbText, string fatText)
+        {
+            if (food.Length > 20 || protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
             {
                 throw new ArgumentException();
             }

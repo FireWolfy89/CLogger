@@ -11,8 +11,8 @@ namespace CLogger.Classes
 
     interface IDataValidation
     {
-        bool IsInputValid(string food, string protText, string carbText, string fatText);
-        //bool IsInputValid_daily(string foodtext, string prot, string carbs, string fat);
+        bool IsInputValidDaily(string food, string protText, string carbText, string fatText);
+        bool IsInputValid(string prot, string carb, string fat);
         string ConvertToDouble(string protText, string carbText, string fatText);
 
 

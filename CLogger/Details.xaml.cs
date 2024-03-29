@@ -45,7 +45,7 @@ namespace CLogger
 
             try
             {
-                dataValidation.IsInputValid(null,DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
+                dataValidation.IsInputValid(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 
                 macro.Result = dataValidation.ConvertToDouble(DProtTextBox.Text, DCarbsTextBox.Text, DFatTextBox.Text);
 

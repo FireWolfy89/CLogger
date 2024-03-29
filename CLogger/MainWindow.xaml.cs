@@ -33,7 +33,7 @@ namespace CLogger
         {
             try
             {
-                dataValidation.IsInputValid(null, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
+                dataValidation.IsInputValid(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
                 string cal = dataValidation.ConvertToDouble(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
