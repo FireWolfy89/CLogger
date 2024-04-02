@@ -34,6 +34,7 @@ namespace CLogger.Classes
             return true;
         }
 
+
         public bool IsInputValidDaily(string food, string protText, string carbText, string fatText)
         {
             if (food.Length > 15 || protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
@@ -46,6 +47,7 @@ namespace CLogger.Classes
             }
             return true;
         }
+
     }
 
 
