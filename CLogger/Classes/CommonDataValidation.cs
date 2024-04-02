@@ -37,7 +37,7 @@ namespace CLogger.Classes
        
         public bool IsInputValidDaily(string food, string protText, string carbText, string fatText)
         {
-            if (food.Length > 20 || protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
+            if (food.Length > 15 || protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
             {
                 throw new ArgumentException();
             }
