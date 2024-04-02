@@ -23,7 +23,7 @@ namespace CLogger.Classes
 
         public bool IsInputValid(string prot, string carb, string fat)
         {
-            if (prot.Length > 5 || carb.Length > 5 || fat.Length > 5)
+            if (protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
             {
                 throw new ArgumentException();
             }
