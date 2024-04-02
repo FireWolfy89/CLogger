@@ -89,7 +89,7 @@ namespace CLogger
                 }
                 else
                 {
-                    MessageBox.Show("A record with this date already exists in the database.");
+                    MessageBox.Show("A record with this date already exists.");
                 }
             }
 
