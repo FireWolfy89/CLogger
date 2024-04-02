@@ -21,13 +21,13 @@ namespace CLogger.Classes
             return cal;
         }
 
-        public bool IsInputValid(string prot, string carb, string fat)
+        public bool IsInputValid(string protText, string carbText, string fatText)
         {
             if (protText.Length > 5 || carbText.Length > 5 || fatText.Length > 5)
             {
                 throw new ArgumentException();
             }
-            else if (prot.Contains("-") || carb.Contains("-") || fat.Contains("-"))
+            else if (protText.Contains("-") || carbText.Contains("-") || fatText.Contains("-"))
             {
                 throw new ArgumentException();
             }
