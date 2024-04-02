@@ -15,7 +15,7 @@
         <Label Content="Fat(g): " HorizontalAlignment="Left" Margin="37,193,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Total Calories(kcal)" HorizontalAlignment="Left" Margin="37,297,0,0" VerticalAlignment="Top" Width="180"/>
         <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Date" Margin="323,79,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
-        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Prot" Margin="323,117,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30" RenderTransformOrigin="0.306,0.524"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Prot" Margin="323,117,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
         <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Carbs" Margin="323,155,0,0" Background="Beige" TextAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
         <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Fat" Margin="323,196,0,0" TextAlignment="Center" Background="Beige" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>
         <TextBox HorizontalAlignment="Left" IsReadOnly="True" x:Name="R1Res" Margin="323,300,0,0" TextAlignment="Center" TextWrapping="Wrap" Background="Beige" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30"/>

@@ -136,6 +136,7 @@ namespace CLogger
 
             ReadDataBase();
             DailyCalcButton.Visibility = Visibility.Visible;
+            Clear_Button(null, null);
         }
 
         private void Update_Button(object sender, RoutedEventArgs e)

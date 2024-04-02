@@ -22,7 +22,6 @@ namespace CLogger
     public partial class Details : Window
     {
         Macros macro;
-
         private IDataValidation dataValidation = new CommonDataValidation();
 
         public Details(Macros macro)
@@ -70,6 +69,9 @@ namespace CLogger
 
 
             Close();
+            Logs1 log1 = new Logs1();
+            log1.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            log1.Show();
         }
 
         private void Delete_Button(object sender, RoutedEventArgs e)
@@ -80,8 +82,10 @@ namespace CLogger
                 connection.Delete(macro);
                 
             }
-
+            
+            MessageBox.Show("Log deleted!");
             Close();
+
         }
     }
 }
