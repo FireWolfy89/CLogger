@@ -41,7 +41,7 @@ namespace CLogger
         {
             try
             {
-                dataValidation.IsInputValid(null, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
+                dataValidation.IsInputValid(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
                 string cal = dataValidation.ConvertToDouble(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
@@ -136,6 +136,7 @@ namespace CLogger
 
             ReadDataBase();
             DailyCalcButton.Visibility = Visibility.Visible;
+            Clear_Button(null, null);
         }
 
         private void Update_Button(object sender, RoutedEventArgs e)
@@ -150,7 +151,7 @@ namespace CLogger
                     SelectedDaily.Carb = DailyCarb.Text;
                     SelectedDaily.Fat = DailyFat.Text;
 
-                    dataValidation.IsInputValid(DailyFood.Text, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
+                    dataValidation.IsInputValidDaily(DailyFood.Text, DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 
                     SelectedDaily.Result = dataValidation.ConvertToDouble(DailyProt.Text, DailyCarb.Text, DailyFat.Text);
 

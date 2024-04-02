@@ -105,6 +105,8 @@
             </Setter>
         </Style>
 
+       
+
         <Style
         TargetType="local:DailyWindow">
             <Setter Property="FontSize" Value="16"/>
@@ -126,7 +128,28 @@
             </Setter>
         </Style>
 
-        
+        <Style
+        TargetType="local:Logs1">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="{StaticResource BlackBackgroundBrush}"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="Beige"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Border Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          CornerRadius="30">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style
          TargetType="local:Result1">
             <Setter Property="FontSize" Value="16"/>

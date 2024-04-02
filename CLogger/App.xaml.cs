@@ -22,4 +22,10 @@ namespace CLogger
         public static string databasePath = System.IO.Path.Combine(folderPath, databaseName);
     }
 
+    public partial class DB3 : Application
+    {
+        static string databaseName = "Weeks.db";
+        static string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string databasePath = System.IO.Path.Combine(folderPath, databaseName);
+    }
 }

@@ -19,6 +19,7 @@ namespace CLogger
     public partial class MainWindow : Window
     {
         Macros macro;
+        List<Macros> macros;
 
         private IDataValidation dataValidation = new CommonDataValidation();
 
@@ -33,7 +34,7 @@ namespace CLogger
         {
             try
             {
-                dataValidation.IsInputValid(null, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
+                dataValidation.IsInputValid(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
                 string cal = dataValidation.ConvertToDouble(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
@@ -54,9 +55,23 @@ namespace CLogger
 
         private void Logs_Button(object sender, RoutedEventArgs e)
         {
-            Logs logs = new Logs();
-            logs.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            logs.ShowDialog();
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            {
+                conn.CreateTable<Macros>();
+                macros = conn.Table<Macros>().ToList();
+            }
+
+            if (macros.Count != 0)
+            {
+                Logs1 logs = new Logs1();
+                logs.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                logs.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No logs recorded yet");   
+            }
+            
         }
 
         private void CalFood(object sender, RoutedEventArgs e)
@@ -65,5 +80,7 @@ namespace CLogger
             daily.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             daily.ShowDialog(); 
         }
+
+        
     }
 }

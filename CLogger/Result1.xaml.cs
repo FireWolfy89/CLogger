@@ -66,29 +66,37 @@ namespace CLogger
 
         private void Save_Button(object sender, RoutedEventArgs e)
         {
-            Macros macro = new Macros()
-            {
-                Date = DateTime.Parse(R1Date.Text),
-                Protein = R1Prot.Text,
-                Carb = R1Carbs.Text,
-                Fat = R1Fat.Text,
-                Result = R1Res.Text,
-            };
-
-
+            DateTime date = DateTime.Parse(R1Date.Text);
 
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
             {
                 connection.CreateTable<Macros>();
-                connection.Insert(macro);
+                var existingRecord = connection.Table<Macros>().FirstOrDefault(m => m.Date == date);
 
+                
+                if (existingRecord == null)
+                {
+                    Macros macro = new Macros()
+                    {
+                        Date = date,
+                        Protein = R1Prot.Text,
+                        Carb = R1Carbs.Text,
+                        Fat = R1Fat.Text,
+                        Result = R1Res.Text,
+                    };
+
+                    connection.Insert(macro);
+                }
+                else
+                {
+                    MessageBox.Show("A record with this date already exists in the database.");
+                }
             }
 
             this.Close();
-
         }
 
-        
+
     }
 }
 
