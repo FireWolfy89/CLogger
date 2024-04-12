@@ -13,7 +13,7 @@
         <TextBox HorizontalAlignment="Right" x:Name="LCarb" Background="Beige" TextAlignment="Center" IsReadOnly="True" Margin="0,217,29,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="32" FontSize="20" />
         <TextBox HorizontalAlignment="Right" x:Name="LFat" Background="Beige" TextAlignment="Center" IsReadOnly="True" Margin="0,289,29,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="32" FontSize="20" />
         <TextBox HorizontalAlignment="Right" x:Name="LRes" Background="Beige" TextAlignment="Center" IsReadOnly="True" Margin="0,368,29,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="32" FontSize="20" />
-        <Label HorizontalAlignment="Left" x:Name="LDate" Margin="143,23,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="416" Height="35" FontSize="25" FontFamily="Arial Black" Background="LightCyan"/>
+        <Label HorizontalAlignment="Left" x:Name="LDate" Margin="143,23,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="416" Height="35" FontSize="20" FontFamily="Arial Black" Background="LightCyan"/>
         <Label Content="Protein(g)" HorizontalAlignment="Left" Margin="24,147,0,0" VerticalAlignment="Top" Width="119"/>
         <Label Content="Carbs(g)" HorizontalAlignment="Left" Margin="24,217,0,0" VerticalAlignment="Top" Width="119"/>
         <Label Content="Fat(g)" HorizontalAlignment="Left" Margin="24,289,0,0" VerticalAlignment="Top" Width="119"/>

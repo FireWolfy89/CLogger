@@ -30,14 +30,14 @@ namespace CLogger
 
             this.macro = macro;
 
-            DDateNameBox.Text = macro.Date.ToString("yyyy.MM.dd");
+            DDateNameBox.Content = macro.Date.ToString("yyyy.MM.dd");
             DProtTextBox.Text = macro.Protein;
             DCarbsTextBox.Text = macro.Carb;
             DFatTextBox.Text = macro.Fat;
         }
         private void Update_Button(object sender, RoutedEventArgs e)
         {
-            macro.Date = DateTime.Parse(DDateNameBox.Text);
+            macro.Date = DateTime.Parse((string)DDateNameBox.Content);
             macro.Protein = DProtTextBox.Text;
             macro.Carb = DCarbsTextBox.Text;
             macro.Fat = DFatTextBox.Text;
@@ -53,6 +53,8 @@ namespace CLogger
                     connection.CreateTable<Macros>();
                     connection.Update(macro);
                 }
+
+                MessageBox.Show("Record updated! New calorie for the day is: " + macro.Result);
             }
 
             catch(FormatException)

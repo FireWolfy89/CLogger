@@ -11,7 +11,7 @@
         <Label Content="Current Weight:" HorizontalAlignment="Left" Margin="32,48,0,0" VerticalAlignment="Top" Width="150"/>
         <Label Content="Goal Weight:" HorizontalAlignment="Left" Margin="32,81,0,0" VerticalAlignment="Top" Width="150" />
         <Label Content="Activity:" HorizontalAlignment="Left" Margin="32,114,0,0" VerticalAlignment="Top" Width="150" />
-        <Label Content="Calculate your Macro plan" Background="LightCoral" HorizontalAlignment="Left" Margin="186,231,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="250" />
+        <Label Content="Calculate your Macro plan" Background="LightCoral" HorizontalAlignment="Left" Margin="176,195,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="250" />
 
         <UniformGrid Columns="3" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Width="550"/>
 

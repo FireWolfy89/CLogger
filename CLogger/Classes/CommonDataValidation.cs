@@ -19,7 +19,7 @@ namespace CLogger.Classes
             double prot = double.Parse(protText);
             double carb = double.Parse(carbText);
             double fat = double.Parse(fatText);
-            string cal = (prot * 4 + carb * 4 + fat * 9).ToString();
+            string cal = (prot * 4 + carb * 4 + fat * 9).ToString("N1");
 
             return cal;
         }

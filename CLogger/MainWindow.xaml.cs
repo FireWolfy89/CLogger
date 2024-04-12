@@ -27,7 +27,8 @@ namespace CLogger
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            DateNameBox.Text = DateTime.Now.ToString("yyyy.MM.dd");
+            DateNameBox.Content = DateTime.Now.ToString("yyyy.MM.dd");
+            
         }
 
         private void Calculate_Button(object sender, RoutedEventArgs e)
@@ -38,7 +39,7 @@ namespace CLogger
 
                 string cal = dataValidation.ConvertToDouble(ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text);
 
-                Result1 res = new Result1(DateNameBox.Text, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text, cal);
+                Result1 res = new Result1((string)DateNameBox.Content, ProtTextBox.Text, CarbsTextBox.Text, FatTextBox.Text, cal);
                 res.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 res.ShowDialog();
             }
