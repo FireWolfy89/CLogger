@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -22,7 +23,7 @@ namespace CLogger
     /// </summary>
     public partial class Progress : Window
     {
-        private IDataValidation dataValidation = new CommonDataValidation();
+        private CommonDataValidation dataValidation = new CommonDataValidation();
         private List<Goals> goalslist;
         private Goals goal;
 
@@ -51,6 +52,8 @@ namespace CLogger
                     ProtBox.Text = goal.Prot;
                     CarbsBox.Text = goal.Carbs;
                     FatBox.Text = goal.Fat;
+                    WeightChange.Text = goal.TextInfo;
+                    KgBox.Text = goal.Kg;
                 }
                 else
                 {
@@ -62,6 +65,8 @@ namespace CLogger
                     ProtBox.Text = string.Empty;
                     CarbsBox.Text = string.Empty;
                     FatBox.Text = string.Empty;
+                    WeightChange.Text = string.Empty;
+                    KgBox.Text = string.Empty;  
                 }
 
             }
@@ -75,9 +80,20 @@ namespace CLogger
                 {
                     double[] Conversion = dataValidation.ConvertToDoubleArray(CWeight.Text, GWeight.Text, Activity.Text);
 
-                    if (Conversion[0] > Conversion[1]) dataValidation.Macro_Calculate(Conversion, 2.2, kcalBox, ProtBox, CarbsBox, FatBox);
+                    if (Conversion[0] > Conversion[1])
+                    {
+                        dataValidation.Macro_Calculate(Conversion, 2.2, kcalBox, ProtBox, CarbsBox, FatBox);
+                        WeightChange.Text = "The amount of kgs that you have to lose/week: ";
+                        KgBox.Text = "1";
+                    }
 
-                    else if (Conversion[0] < Conversion[1]) dataValidation.Macro_Calculate(Conversion, 1.8, kcalBox, ProtBox, CarbsBox, FatBox);
+                    else if (Conversion[0] < Conversion[1])
+                    {
+                        dataValidation.Macro_Calculate(Conversion, 1.8, kcalBox, ProtBox, CarbsBox, FatBox);
+                        WeightChange.Text = "The amount of kgs that you have to gain/week: ";
+                        KgBox.Text = "0.25 - 0.5";
+                    }
+                    
 
                 }
 
@@ -102,14 +118,16 @@ namespace CLogger
                 {
 
                     connection.Delete(existingGoal);
+                    
                     MessageBox.Show("The goal has been cleared!");
+
                 }
                 else
                 {
                     MessageBox.Show("There are no goals to clear!");
                 }
             }
-
+  
             ReadDataBase();
         }
 
@@ -136,6 +154,8 @@ namespace CLogger
                             existingGoal.Carbs = CarbsBox.Text;
                             existingGoal.Fat = FatBox.Text;
                             existingGoal.Kcal = kcalBox.Text;
+                            existingGoal.TextInfo = WeightChange.Text;
+                            existingGoal.Kg = KgBox.Text;
 
                             connection.Update(existingGoal);
                             MessageBox.Show("The goal has been updated!");
@@ -151,7 +171,9 @@ namespace CLogger
                                 Prot = ProtBox.Text,
                                 Carbs = CarbsBox.Text,
                                 Fat = FatBox.Text,
-                                Kcal = kcalBox.Text
+                                Kcal = kcalBox.Text,
+                                TextInfo = WeightChange.Text,
+                                Kg = KgBox.Text
                             };
 
                             connection.Insert(goal);

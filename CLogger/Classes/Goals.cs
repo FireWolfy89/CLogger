@@ -29,5 +29,7 @@ namespace CLogger.Classes
         public string Fat { get; set; }
 
         public string Kg { get; set; }
+
+        public string TextInfo { get; set; }
     }
 }

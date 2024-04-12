@@ -24,20 +24,18 @@
             <Label Content="Carbs/Day" Background="LightCyan" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <Label Content="Fat/Day" Background="LightCyan" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-            <TextBox x:Name="kcalBox" Text="TextBox1" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="ProtBox" Text="TextBox2" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="CarbsBox" Text="TextBox3" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="FatBox" Text="TextBox4" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="kcalBox" FontWeight="Bold" Text="TextBox1" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="ProtBox" FontWeight="Bold" Text="TextBox2" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="CarbsBox" FontWeight="Bold" Text="TextBox3" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="FatBox" FontWeight="Bold" Text="TextBox4" TextAlignment="Center" Background="Beige" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </UniformGrid>
-
-        <Label Content="Kg/Week:" Background="LightCyan" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="61,488,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="KgBox" HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Background="Beige" Margin="432,488,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30" />
+        <TextBox x:Name="KgBox" FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center" IsReadOnly="True" Background="Beige" Margin="241,503,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="30" />
         <ComboBox x:Name="Activity" HorizontalAlignment="Left" Margin="444,119,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="120" SelectedIndex="0" >
             <ComboBoxItem>Active</ComboBoxItem>
             <ComboBoxItem>Sedentary</ComboBoxItem>
             <ComboBoxItem>Very Active</ComboBoxItem>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="85,462,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="WeightChange" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,460,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Set Your Goals" Background="LightCoral" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Button Content="Clear Goals" Click="Clear_Goals" HorizontalAlignment="Left" Margin="444,195,0,0" VerticalAlignment="Top" Width="120" Height="30" />
         <Button Content="Save Goals" Click="Set_Goals" x:Name="SetGoals" HorizontalAlignment="Left" Margin="32,195,0,0" VerticalAlignment="Top" Width="120" Height="30"/>
