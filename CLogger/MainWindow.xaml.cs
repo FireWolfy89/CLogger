@@ -81,6 +81,13 @@ namespace CLogger
             daily.ShowDialog(); 
         }
 
-        
+        private void Goals_Button(object sender, RoutedEventArgs e)
+        {
+            Progress goal = new Progress();
+            goal.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            goal.ShowDialog();
+        }
+
+
     }
 }
