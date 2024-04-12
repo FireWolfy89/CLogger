@@ -67,7 +67,6 @@
             x:Name="DateNameBox"
             FontSize="18"
             FontWeight="Bold"
-            FontStyle="Italic"
             TextAlignment="Center"
             Foreground="Black"
             Background="Transparent"
