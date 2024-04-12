@@ -65,7 +65,7 @@ namespace CLogger
 
             catch (ArgumentException)
             {
-                MessageBox.Show("The input number is too big/negative!");
+                MessageBox.Show("Invalid input. Number is either negative or too big!");
             }
 
 

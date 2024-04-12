@@ -49,7 +49,7 @@ namespace CLogger
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Invalid input. Nukber is either negative or too big!");
+                MessageBox.Show("Invalid input. Number is either negative or too big!");
             }
 
         }

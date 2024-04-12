@@ -30,7 +30,7 @@ namespace CLogger.Classes
             {
                 throw new ArgumentException();
             }
-            else if (protText.Contains("-") || carbText.Contains("-") || fatText.Contains("-"))
+            else if (double.Parse(protText) < 0 || double.Parse(carbText) < 0 || double.Parse(fatText) < 0)
             {
                 throw new ArgumentException();
             }
@@ -44,7 +44,7 @@ namespace CLogger.Classes
             {
                 throw new ArgumentException();
             }
-            else if (protText.Contains("-") || carbText.Contains("-") || fatText.Contains("-"))
+            else if (double.Parse(protText) < 0 || double.Parse(carbText) < 0 || double.Parse(fatText) < 0)
             {
                 throw new ArgumentException();
             }
